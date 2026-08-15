@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First World Problems — The Sims of Modern Angst</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="ui">
+      <div id="header">
+        <h1>☕ First World Problems</h1>
+        <div id="score">Problems Solved: <span id="score-value">0</span></div>
+        <div id="day">Day <span id="day-value">1</span> • <span id="time-value">9:00 AM</span></div>
+      </div>
+
+      <div id="needs-panel">
+        <div class="need" data-need="caffeine">
+          <span class="need-label">☕ Caffeine</span>
+          <div class="bar"><div class="fill" id="bar-caffeine"></div></div>
+          <span class="need-value" id="val-caffeine">100</span>
+        </div>
+        <div class="need" data-need="connectivity">
+          <span class="need-label">📶 Connectivity</span>
+          <div class="bar"><div class="fill" id="bar-connectivity"></div></div>
+          <span class="need-value" id="val-connectivity">100</span>
+        </div>
+        <div class="need" data-need="battery">
+          <span class="need-label">🔋 Battery</span>
+          <div class="bar"><div class="fill" id="bar-battery"></div></div>
+          <span class="need-value" id="val-battery">100</span>
+        </div>
+        <div class="need" data-need="validation">
+          <span class="need-label">❤️ Validation</span>
+          <div class="bar"><div class="fill" id="bar-validation"></div></div>
+          <span class="need-value" id="val-validation">100</span>
+        </div>
+        <div class="need" data-need="vibe">
+          <span class="need-label">✨ Vibe</span>
+          <div class="bar"><div class="fill" id="bar-vibe"></div></div>
+          <span class="need-value" id="val-vibe">100</span>
+        </div>
+      </div>
+
+      <div id="speech-bubble" class="hidden">
+        <p id="speech-text"></p>
+      </div>
+
+      <div id="action-panel" class="hidden">
+        <h3 id="action-title">Interact</h3>
+        <div id="action-buttons"></div>
+        <button id="close-actions" class="secondary">Never mind</button>
+      </div>
+
+      <div id="event-modal" class="hidden">
+        <div class="modal-content">
+          <h2 id="event-title">🚨 First World Crisis!</h2>
+          <p id="event-desc"></p>
+          <button id="event-dismiss">Acknowledge My Privilege</button>
+        </div>
+      </div>
+
+      <div id="game-over" class="hidden">
+        <div class="modal-content">
+          <h2>🤪 Total Meltdown</h2>
+          <p id="game-over-text"></p>
+          <p>You survived <span id="final-days">0</span> days and solved <span id="final-score">0</span> problems.</p>
+          <button id="restart-btn">Try Again (Privilege Reset)</button>
+        </div>
+      </div>
+
+      <div id="instructions">
+        <p><strong>Click objects</strong> to interact • Manage your fragile modern existence</p>
+        <p class="hint">WASD / Arrows to move • Mouse to look around</p>
+      </div>
+    </div>
+
+    <canvas id="game-canvas"></canvas>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

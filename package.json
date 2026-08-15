@@ -1,0 +1,20 @@
+{
+  "name": "first-world-problems",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "~5.6.3",
+    "vite": "^5.4.10"
+  },
+  "optionalDependencies": {
+    "three": "^0.169.0",
+    "@types/three": "^0.169.0"
+  },
+  "description": "A Sims-like comedy game about handling First World Problems. Three.js + TypeScript."
+}
